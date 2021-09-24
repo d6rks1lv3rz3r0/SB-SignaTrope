@@ -3,6 +3,7 @@ SignaTrope is a stand-alone navigation core that can be installed on any ship an
 
 ## Installation
 
+0) Download the [latest release](https://github.com/d6rks1lv3rz3r0/SB-SignaTrope/releases/download/v.0.1.2/SignaTrope.v0.1.2.fbe).
 1) Load the blueprint file and turn it into a module.
 2) Add the module to anywhere you like on yourship.
 3) Weld the beams to your frame, connect the power cable from the front.
@@ -39,5 +40,5 @@ SignaTrope is a stand-alone navigation core that can be installed on any ship an
 | Nav2 | Coordinate Stabilization Success  |
 | Ori  | Orientation Stabilization Success |
 
-
+## FAQ
 
