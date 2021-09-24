@@ -1,6 +1,13 @@
 # SB-SignaTrope
 SignaTrope is a stand-alone navigation core that can be installed on any ship and will provide navigation related information for use in automation tasks.
 
+## Installation
+
+1) Load the blueprint file and turn it into a module.
+2) Add the module to anywhere you like on yourship.
+3) Weld the beams to your frame, connect the power cable from the front.
+4) Take the control/dash elements on the core and place them on your control board.
+
 ## Pin-Out
 | Variable  | Description |
 |------|-----------------------------------|
