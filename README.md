@@ -61,4 +61,10 @@ Whether this has happened successfully is reported on the status light `:Nav`.
 :Nav=:Chk1*:Chk2*:Chk3 goto1
 ```
 
-### Next Question
+### Why 10 Receivers Instead of 4 or 12?
+
+In an ideal environment where we are provided distances to a particular location (transmitters) in a cheat like manner such that there is no travel-time for the signal or doppler effects like in StarBase, you only need 3 points to uniquely determine the position of a ship with 1 caveat: it is not possible to determine which side of the origin circle (towards the planet or the belt) you are without having a 4th measurement. However, in practical cases it is only necessary to determine which side of the plane the ship resides once (and not individually for each set of receivers).
+
+The system is designed to use the minimum number of receivers possible without changing signal target, grouped in the smallest packing possible so that it can fit almost any ship. For this you need exactly 10 receivers. 3 for Center Point 3 for Front 3 for Up 1 for Mirror Plane disambiguation
+
+### Next
