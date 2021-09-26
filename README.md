@@ -43,3 +43,22 @@ SignaTrope is a stand-alone navigation core that can be installed on any ship an
 
 ## FAQ
 
+### How Does Receiver Stabilization Work?
+Receivers and the YOLOL code that will use their value get executed in a random order within a single YOLOL tic, meaning sometimes YOLOL may compute before receiver updates or it after it updates twice depending on how they happened to be ordered. To accomodate this in a brute-force way, the system enforces that readings from all 9 receivers agree with each other whether they are all delayed, or over ticced or all proper.
+
+The following line checks whether all receivers pointing to a particular Origin Transmitter (like East) show values within a particular tolerance based on their seperation inside the core. If they do, a flag is set to `1`. This is repeated times for each set of 3 transmitters pointing to the same transmitter (Front, Center and Up Points)
+
+```pony
+fd=abs(:F1S-:O1S) ud=abs(:U1S-:O1S) i=(fd<2.5)*(ud<2.5) :Chk1=i
+```
+The values from the receivers are allowed to pass for further processing only if all checks on all 9 transmitters report a GO.
+
+```pony
+if :Chk1*:Chk2*:Chk3 then :O1=:O1S :F1=:F1S :U1=:U1S end goto1
+```
+Whether this has happened successfully is reported on the status light `:Nav`.
+```pony
+:Nav=:Chk1*:Chk2*:Chk3 goto1
+```
+
+### Next Question
