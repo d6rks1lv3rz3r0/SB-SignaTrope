@@ -1,5 +1,5 @@
 # SB-SignaTrope
-SignaTrope is a stand-alone navigation core that can be installed on any ship and will provide navigation related information for use in automation tasks.
+SignaTrope is a stand-alone navigation core that can be installed on any ship and will provide navigation related information for use in automation tasks. [Latest blueprint.](https://github.com/d6rks1lv3rz3r0/SB-SignaTrope/releases/download/v0.3.0/SignaTrope.v0.3.0.fbe).
 
 ![Front](/imagev03.png)
 
